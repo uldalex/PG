@@ -1,0 +1,148 @@
+//- Все примеси в этом файле должны начинаться c имени блока (main-nav)
+//- Структура меню — в main-nav.data.pug
+
+mixin main-nav(selectedID)
+
+  //- Принимает:
+  //-   selectedID {string} - id пункта меню (по умолчанию — из main-nav.data.pug)
+  //- Вызов:
+        +main-nav('1')
+
+  //- подключаем файл со структурой данных блока
+  include main-nav.data.pug
+  +burger('Показать главное меню', 'nav', 'main-nav--open')(class='main-nav__toggler')
+  nav.main-nav#nav&attributes(attributes)
+    .main-nav__inner
+      .main-nav__row
+        .main-nav__grid
+          ul.main-nav__list
+            li.main-nav__item
+              a(href="/about-company/")
+                h3 О компании
+              ul.main-nav__sub-list
+                li.main-nav__item
+                  a.main-nav__link(href="/about-company/") Знакомство с компанией 
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/geography-of-services/") География услуг
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/our-experience/") Наш опыт
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/about-company/facts/rating/") Рейтинги, Награды, Цифры
+                   svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/news/") Новости
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/career/") Карьера
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/about-company/why/") Почему “Пепеляев Групп”?
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/about-company/message-from-the-managing-partner/") Обращение Управляющего Партнера
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+            li.main-nav__item
+              a(href="/practice-and-industry/")
+                h3 Услуги
+            li.main-nav__item
+              a(href="/to-get-the-team/")
+                h3 Команда 
+        .main-nav__grid
+          ul.main-nav__list
+            li.main-nav__item
+              a(href="/analytics-and-brochures/")
+                h3 База знаний
+              ul.main-nav__sub-list
+                li.main-nav__item
+                  a.main-nav__link(href="/analytics-and-brochures/legislation/") Обзоры
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/analytics-and-brochures/alerts/") Алерты
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/analytics-and-brochures/articles/") Статьи 
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/analytics-and-brochures/comments-in-the-media/") Комментарии в СМИ
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")   
+                li.main-nav__item
+                  a.main-nav__link(href="/analytics-and-brochures/books/") Книги
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/analytics-and-brochures/journals/") Журналы
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/analytics-and-brochures/bankruptcy-must-read/") Банкротство: Must Read
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+                li.main-nav__item
+                  a.main-nav__link(href="/analytics-and-brochures/presentations/") Презентации экспертов
+                    svg(class="main-nav__arrows" width="26px" height="24px")
+                      use(xlink:href="img/sprite.svg#arrow")
+            li.main-nav__item
+              a(href="/lp/legalissuesofcovid/")
+                h3 COVID-19
+        .main-nav__grid
+          ul.main-nav__list
+            li.main-nav__item
+              a(href="/events/")
+                h3 Мероприятия
+              ul.main-nav__sub-list
+                  li.main-nav__item
+                    a.main-nav__link(href="/events/") Мероприятия
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                       use(xlink:href="img/sprite.svg#arrow")
+                  li.main-nav__item
+                    a.main-nav__link(href="/events/video/") Видеозаписи
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                        use(xlink:href="img/sprite.svg#arrow")
+            li.main-nav__item
+              a(href="/contacts/")
+                h3 Контакты
+              ul.main-nav__sub-list
+                  li.main-nav__item
+                    a.main-nav__link(href="/contacts/moscow/") Москва
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                        use(xlink:href="img/sprite.svg#arrow")
+                  li.main-nav__item
+                    a.main-nav__link(href="/contacts/sankt-peterburg/") Санкт-Петербург 
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                       use(xlink:href="img/sprite.svg#arrow")     
+                  li.main-nav__item
+                    a.main-nav__link(href="/contacts/krasnoyarsk/") Красноярск
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                       use(xlink:href="img/sprite.svg#arrow") 
+                  li.main-nav__item
+                    a.main-nav__link(href="/contacts/yuzhno-sakhalinsk/") Южно-Сахалинск
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                       use(xlink:href="img/sprite.svg#arrow")
+                  li.main-nav__item
+                    a.main-nav__link(href="/contacts/vladivostok/") Владивосток
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                       use(xlink:href="img/sprite.svg#arrow")
+                  li.main-nav__item
+                    a.main-nav__link(href="/contacts/peck/") Пекин
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                       use(xlink:href="img/sprite.svg#arrow")
+                  li.main-nav__item
+                    a.main-nav__link(href="/contacts/shanghai/") Шанхай
+                      svg(class="main-nav__arrows" width="26px" height="24px")
+                        use(xlink:href="img/sprite.svg#arrow")
+  block

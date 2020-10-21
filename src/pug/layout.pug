@@ -1,0 +1,121 @@
+//- Стандартный шаблон страницы
+
+include mixins.pug
+
+doctype html
+html(class='page  no-js', lang='ru')
+
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    //- Edge и ряд мобильных браузеров слишком умны. Отключим это.
+    meta(name='format-detection', content='telephone=no')
+    meta(name='format-detection', content='date=no')
+    meta(name='format-detection', content='address=no')
+    meta(name='format-detection', content='email=no')
+    meta(content='notranslate', name='google')
+    //- Фавиконки (https://realfavicongenerator.net)
+    //- link(rel='apple-touch-icon', sizes='180x180', href='/img/favicon/apple-touch-icon.png')
+    //- link(rel='icon', type='image/png', sizes='32x32', href='/img/favicon/favicon-32x32.png')
+    //- link(rel='icon', type='image/png', sizes='16x16', href='/img/favicon/favicon-16x16.png')
+    //- link(rel='manifest', href='/img/favicon/site.webmanifest')
+    //- link(rel='mask-icon', href='/img/favicon/safari-pinned-tab.svg', color='#5bbad5')
+    //- meta(name='msapplication-TileColor', content='#5bbad5')
+    //- meta(name='theme-color', content='#000')
+    //- meta(name='msapplication-navbutton-color', content='#000')
+    //- meta(name='apple-mobile-web-app-status-bar-style', content='#000')
+
+    block meta
+      title Home
+
+    block head
+      link(rel='stylesheet', href='css/style.css')
+      script
+        include ../js/head-script.js
+
+  body
+    noscript У вас отключен JavaScript. Это пугает.
+
+    .page__inner
+      .page__content
+        //- header
+        +page-header()
+          +logo('/')
+            svg(class="logo__svg")
+             use(xlink:href="img/sprite.svg#logo") 
+            h1.logo__title Пепеляев Групп
+          //-header-menu
+          +header-menu()
+            ul.header-menu__list
+              li.header-menu__item
+                svg(class="icons" width="18px" height="18px")
+                  use(xlink:href="img/sprite.svg#search")
+                a#search-toggler.header-menu__link.header-menu__search(href="#") Поиск
+              li.header-menu__item
+                svg(class="icon-fill" width="20px" height="20px")
+                  use(xlink:href="img/sprite.svg#phone")
+                a.header-menu__link.header-menu__phone(href="tel:+74957670007") +7 (495) 767-00-07
+              li.header-menu__item
+                svg(class="icon-fill" width="19px" height="19px")
+                  use(xlink:href="img/sprite.svg#aut")
+                a.header-menu__link.header-menu__link.header-menu__aut(href="#") Личный кабинет
+              ll.header-menu__item
+                svg(class="flags" width="18px" height="12px")
+                  use(xlink:href="img/sprite.svg#flag_rf")
+                a.header-menu__link.header-menu__language(href="#") Русский
+                  svg(class="icons" width="8px" height="8px")
+                    use(xlink:href="img/sprite.svg#arrow_down")
+                
+
+          //- navigation
+          block nav
+          //- cearch
+          +search()
+          //- banners block
+        +carousel()
+          //- content block
+        block content
+          //-About
+          section.about
+            .about__inner
+              .about__row
+                .about__content
+                  .about__title О компании 
+                  .about__text 
+                    .about-text__before
+                      figure 
+                        img(src="img/logo-white.svg" width="52px" height="43px")
+                    .about-text__content 
+                      p «Пепеляев Групп» – ведущая российская юридическая компания, предоставляющая полный спектр правовых услуг во всех регионах России, странах СНГ и за рубежом. Более 160 юристов в Москве, Санкт-Петербурге, Красноярске, Южно-Сахалинске, Владивостоке, Пекине и Шанхае обеспечивают правовую поддержку более чем 1500 компаний, занятых в разных отраслях экономики, 50% из которых – международные корпорации, осуществляющие долгосрочные инвестиционные проекты на территории России.
+                .about__events
+                  .about__title Мероприятия 
+                  .about__event
+                    .about-text__date.about-text__date--old
+                      .about-text__day 21
+                      .about-text__mount Октября 
+                    .about-text__event-content 
+                        a(href="#") Продвижение функции комплаенс внутри компании: лучшие практики 
+                  .about__event
+                    .about-text__date.about-text__date--old
+                      .about-text__day 22
+                      .about-text__mount Октября
+                    .about-text__event-content 
+                        a(href="#")  Налоговая кухня. Рецепты от экспертов
+                  .about__event
+                    .about-text__date
+                      .about-text__day 30
+                      .about-text__mount Октября 
+                    .about-text__event-content 
+                      a(href="#") Сибирский налоговый форум
+          +victory()
+               
+          
+           
+      .page__footer-wrapper
+        +page-footer()
+          block footer
+            p «Подвал»
+            p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
+
+    block page-bottom
+      script(src='js/bundle.js')
