@@ -79,6 +79,9 @@ font-style: normal;
   -webkit-text-size-adjust: 100%;
   min-width: 320px;
   min-height: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
 
   &__inner {
     min-height: 100vh;
@@ -490,10 +493,12 @@ h2{
   @include row();
 }
 .about__content {
-  @include col(md, 8, $grid-columns, 40px);
+  @include col(lg, 8, $grid-columns, 40px);
+  @include col(md, 12, $grid-columns, 10px);
 }
 .about__events {
-  @include col(md, 4);
+  @include col(lg, 4);
+  @include col(md, 12);
   @include row();
 }
 .about__title {
@@ -506,7 +511,8 @@ h2{
   text-align: justify;
 }
 .about-text__before {
-  @include col(sm, 1)
+  @include col(md, 1)
+  @include col(sm, 3)
 
   & figure {
     margin: 0px;
@@ -521,7 +527,8 @@ h2{
   }
 }
 .about-text__content {
-  @include col(sm, 11); 
+  @include col(md, 11);
+  @include col(sm, 7); 
 }
 .about-text__content p {
   padding: 0 5rem 0 1rem;
@@ -530,7 +537,8 @@ h2{
   @include col(sm, 9, $grid-columns, 10px); 
 }
 .about-text__date {
-  @include col(sm, 3);
+  @include col(md, 3);
+  @include col(sm, 5);
   background-color: #ffffff;
   color: #272C3E;
   margin: 2px 0;
@@ -539,6 +547,8 @@ h2{
   padding: 15px 0 5px 0;
 }
 .about-text__date--old{
+  @include col(md, 3);
+  @include col(sm, 5);
   background-color: #852E81;
   color:#ffffff;
 }
@@ -548,6 +558,8 @@ h2{
   font-family:'GeometriaMedium';
 }
 .about-text__event-content {
+  @include col(md, 9);
+  @include col(sm, 6);
 margin-left:15px;
 }
 .about-text__event-content a{
@@ -570,10 +582,12 @@ font-family:'GeometriaLight';
     @include row();
   }
   &__content {
-    @include col(md, 8, $grid-columns, 40px)
+    @include col(lg, 8, $grid-columns, 40px);
+    @include col(md, 12, $grid-columns, 10px)
   }
   &__branch {
-    @include col (md, 4)
+    @include col (lg, 4);
+    @include col (md, 12)
   }
   &__list {
     @include row();
@@ -912,7 +926,8 @@ background-color: rgb(242,128,162);
     @include row();
   }
   &-content {
-    @include col(md, 7, $grid-columns, 60px);
+    @include col(lg, 7, $grid-columns, 60px);
+    @include col(md, 12, $grid-columns, 10px);
     border-right: 1px solid #DBDBDB;
     
 
@@ -946,7 +961,8 @@ background-color: rgb(242,128,162);
 
   }
   &-block {
-    @include col(md, 4);
+    @include col(lg, 4);
+    @include col(md, 12);
    
    & h3{
       padding-left: 2.4rem;  
@@ -1138,4 +1154,235 @@ background-color: rgb(242,128,162);
     }
   }
 }
+.map{
+  border-bottom:3px solid #F2EAF1;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+.footer{
+  color: #272C3E;
 
+  &__inner {
+    @include container();
+     padding-top:3rem;
+     padding-bottom:3rem;
+  }
+
+  &__row {
+    @include row();
+  }
+  &__column1 {
+    @include col (lg, 4);
+    @include col (md, 6);
+    color: #272C3E;
+    color: #272C3E;
+    
+  }
+  &__column2 {
+    @include col (lg, 3);
+    @include col (md, 6);
+    @include col-offset(lg, 1);
+    color: #272C3E;
+    
+  }
+  &__column3 {
+    @include col (lg, 3);
+    @include col (md, 12);
+    @include col-offset(lg, 1);
+    color: #272C3E;
+    
+  }
+
+  &__logo {
+    display: flex;
+
+    & svg {
+      margin-right:15px;
+    }
+  }
+  &__adress {
+    padding-top: 2rem;
+    font-size: 14px;
+  }
+  &__copyright {
+    display: flex;
+    flex-direction: column;
+    & a{
+      font-size:14px;
+    }
+  }
+  &__contacts {
+    font-size:14px;
+    display:flex;
+    flex-direction: column;
+
+    & a {
+      text-decoration: none;
+      
+      & span {
+        color:  #272C3E;
+      }
+    }
+  }
+  &__feedback {
+    display:flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    & a {
+      display: flex;
+      align-items: center;
+      font-size:14px;
+      & svg {
+        margin-right:10px;
+      }
+    }
+  }
+  &__sotials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__icons{
+    display: flex;
+    
+    & a{
+    width:25px;
+    height:25px;
+    background-color: #7E2E84;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+    }
+  }
+&__info {
+  font-size:14px;
+  padding-top: 2rem;
+  text-align: right;
+
+  & a {
+    margin: 0 0 0 15px;
+    white-space: nowrap;
+  }
+}
+}
+@media (max-width:768px){
+  .footer{
+    &__sotials {
+      align-items: center;
+      padding-top:2rem;
+    }
+    &__info {
+      text-align: center;
+    }
+
+  } 
+  .burger{
+    position: absolute;
+    right:15px;
+  }
+  #victory .splide__arrow--prev{
+    left:10px;
+  }
+  #victory .splide__arrow--next{
+    right:-40px;
+  }
+  .victory .splide__slide {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+.splide {
+  overflow: hidden;
+}
+.news-content{
+  max-width: 100vw;
+}
+.news-block{
+  max-width: 100vw;
+}
+.about-text__content p {
+  padding: 0 1rem 0 1rem;
+}
+}
+@media (max-width:600px){
+  .page-header {
+    padding-top: 0rem;
+    padding-bottom: 0.5rem;
+  }
+  .logo{
+  justify-content: center;
+  }
+  .header-menu__link span {
+    display:none;
+  }
+  .burger {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+.carousel {
+  margin-top: 95px;
+}
+.splide__slide img {
+  max-width: 2000px;
+  height: 250px;
+}
+figure {
+  max-width:100vw;
+  overflow: hidden;
+}
+.news-content{
+  max-width: 100vw;
+}
+.news-block{
+  max-width: 100vw;
+}
+.slide-desckription{
+  top:10%;
+  left: 10%;
+    right: 10%;
+    width: auto;
+}
+.slide-desckription h3 {
+  font-size: 24px;
+  max-width: 100%;
+}
+.slide-desckription__text {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 100%;
+}
+#news-content .splide__arrow--next{
+  right: 25%;
+}
+#news-content .splide__arrow--prev{
+  left:35%;
+}
+#victory .splide__arrow--next {
+  right: -20px;
+}
+#victory .splide__arrow--prev {
+  left: 20px;
+}
+.splide .splide__arrow--prev {
+  top: 50%;
+  left: 20px;
+}
+.splide .splide__arrow--next {
+  top: 50%;
+  right: -20px;
+}
+.about__event {
+  flex-direction: column;
+}
+.victory {
+  background-color: #f3ecf3;
+  margin-bottom: 0px;
+  padding: 10px 0;
+}
+}
+@media (max-width:340px){
+  .footer__info a{
+    margin:0;
+  }
+}

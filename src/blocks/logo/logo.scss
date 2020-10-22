@@ -5,7 +5,9 @@
 .logo {
 
   $block-name:                &; // #{$block-name}__element
+  @include col(lg, 2);
   @include col(md, 2);
+  @include col(sm, 12);
   white-space: nowrap;
   display: flex;
   align-items: stretch;
@@ -28,7 +30,7 @@
   &__svg {
     display: inline-block;
     width: 155px;
-    min-width: 72px;
+    min-width: 155px;
     height: 72px;
     fill:#9D1D96;
     
@@ -48,6 +50,16 @@
     }
   }
 }
+@media (max-width:768px){
+  .logo {
+   
+    &__svg {
+      transform: scale(0.7);
+
+        }
+    }
+  } 
+
 
   
   

@@ -50,19 +50,19 @@ html(class='page  no-js', lang='ru')
               li.header-menu__item
                 svg(class="icons" width="18px" height="18px")
                   use(xlink:href="img/sprite.svg#search")
-                a#search-toggler.header-menu__link.header-menu__search(href="#") Поиск
+                a#search-toggler.header-menu__link.header-menu__search(href="#") <span>Поиск<span>
               li.header-menu__item
                 svg(class="icon-fill" width="20px" height="20px")
                   use(xlink:href="img/sprite.svg#phone")
-                a.header-menu__link.header-menu__phone(href="tel:+74957670007") +7 (495) 767-00-07
+                a.header-menu__link.header-menu__phone(href="tel:+74957670007") <span>+7 (495) 767-00-07<span>
               li.header-menu__item
                 svg(class="icon-fill" width="19px" height="19px")
                   use(xlink:href="img/sprite.svg#aut")
-                a.header-menu__link.header-menu__link.header-menu__aut(href="#") Личный кабинет
+                a.header-menu__link.header-menu__link.header-menu__aut(href="#") <span> Личный кабинет<span>
               ll.header-menu__item
                 svg(class="flags" width="18px" height="12px")
                   use(xlink:href="img/sprite.svg#flag_rf")
-                a.header-menu__link.header-menu__language(href="#") Русский
+                a.header-menu__link.header-menu__language(href="#") <span> Русский <span>
                   svg(class="icons" width="8px" height="8px")
                     use(xlink:href="img/sprite.svg#arrow_down")
                 
@@ -287,8 +287,57 @@ html(class='page  no-js', lang='ru')
       .page__footer-wrapper
         +page-footer()
           block footer
-            p «Подвал»
-            p Контактный телефон: #[a(href='tel:+70000000000') +7 000 000 00 00]
+          .footer__inner
+              .footer__row
+                .footer__column1
+                  .footer__logo
+                    svg(class="icons" width="62px" height="43px")
+                              use(xlink:href="img/sprite.svg#logo_bottom")
+                    .footer__copyright
+                      span © 2002-2020 PEPELIAEV GROUP
+                      a(href="#") юридические услуги
+                  .footer__adress Россия, 125047, г. Москва,<br>ул. 3-я Тверская-Ямская, д. 39, стр.1
+                .footer__column2
+                  .footer__contacts 
+                    a(href="tel:+74957670007") <span> Тел.:</span> +7 (495) 767 00 07
+                    a(href="mailto:info@pgplaw.ru") <span> E-mail:</span> info@pgplaw.ru
+                  .footer__feedback
+                    a(href="#")
+                     svg(class="icons" width="18px" height="18px")
+                              use(xlink:href="img/sprite.svg#callback") 
+                     span Заказать звонок
+                    a(href="#")
+                     svg(class="icons" width="20px" height="17px")
+                              use(xlink:href="img/sprite.svg#microphone") 
+                     span Подписаться на рассылку
+                     
+
+                .footer__column3
+                  .footer__sotials
+                   .footer__title Оставаться на связи
+                   .footer__icons
+                      a(href="https://www.facebook.com/PepeliaevGroup")
+                        svg(class="icons" width="11px" height="23px")
+                          use(xlink:href="img/sprite.svg#fb") 
+                      a(href="http://www.linkedin.com/company/pepeliaev-group")
+                        svg(class="icons" width="18px" height="18px")
+                          use(xlink:href="img/sprite.svg#insta") 
+                      a(href="https://vk.com/pginternship")
+                        svg(class="icons" width="19px" height="12px")
+                          use(xlink:href="img/sprite.svg#vk") 
+                      a(href="https://www.youtube.com/channel/UCTI33e7sATSoEqzzZdZrXpA")
+                        svg(class="icons" width="16px" height="19px")
+                          use(xlink:href="img/sprite.svg#youtube")
+                      a(href="https://www.pgplaw.ru/news/press-releases/pepeliaev-group-in-telegram")
+                        svg(class="icons" width="18px" height="15px")
+                          use(xlink:href="img/sprite.svg#telegram") 
+                  .footer__info
+                    a(href="/legal-information/") Правовая информация
+                    a(href="/sitemap.php") Карта сайта
+                    a(href="/personal-data/") Политика обработки персональных данных
+
+                    
+            
 
     block page-bottom
       script(src='js/bundle.js')

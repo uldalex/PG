@@ -42,159 +42,145 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
                 <ul class="header-menu__list">
                   <li class="header-menu__item"><svg class="icons" width="18px" height="18px">
                       <use xlink:href="img/sprite.svg#search"></use>
-                    </svg><a class="header-menu__link header-menu__search" id="search-toggler" href="#">Поиск</a></li>
-                  <li class="header-menu__item"><svg class="icon-fill" width="20px" height="20px">
-                      <use xlink:href="img/sprite.svg#phone"></use>
-                    </svg><a class="header-menu__link header-menu__phone" href="tel:+74957670007">+7 (495) 767-00-07</a></li>
-                  <li class="header-menu__item"><svg class="icon-fill" width="19px" height="19px">
-                      <use xlink:href="img/sprite.svg#aut"></use>
-                    </svg><a class="header-menu__link header-menu__link header-menu__aut" href="#">Личный кабинет</a></li>
-                  <ll class="header-menu__item"><svg class="flags" width="18px" height="12px">
-                      <use xlink:href="img/sprite.svg#flag_rf"></use>
-                    </svg><a class="header-menu__link header-menu__language" href="#">Русский<svg class="icons" width="8px" height="8px">
-                        <use xlink:href="img/sprite.svg#arrow_down"></use>
-                      </svg></a></ll>
-                </ul>
+                    </svg><a class="header-menu__link header-menu__search" id="search-toggler" href="#"><span>Поиск<span></a></li><li class="header-menu__item"><svg class="icon-fill" width="20px" height="20px"><use xlink:href="img/sprite.svg#phone"></use></svg><a class="header-menu__link header-menu__phone" href="tel:+74957670007"><span>+7 (495) 767-00-07<span></a></li><li class="header-menu__item"><svg class="icon-fill" width="19px" height="19px"><use xlink:href="img/sprite.svg#aut"></use></svg><a class="header-menu__link header-menu__link header-menu__aut" href="#"><span> Личный кабинет<span></a></li><ll class="header-menu__item"><svg class="flags" width="18px" height="12px"><use xlink:href="img/sprite.svg#flag_rf"></use></svg><a class="header-menu__link header-menu__language" href="#"><span> Русский <span><svg class="icons" width="8px" height="8px"><use xlink:href="img/sprite.svg#arrow_down"></use></svg></a></ll></ul></div></div><div class="burger"><button class="burger__btn main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button>
               </div>
-            </div>
-            <div class="burger"><button class="burger__btn main-nav__toggler" aria-label="Показать главное меню" data-target-id="nav" data-target-class-toggle="main-nav--open"><span>Показать главное меню</span></button></div>
-            <nav class="main-nav" id="nav">
-              <div class="main-nav__inner">
-                <div class="main-nav__row">
-                  <div class="main-nav__grid">
-                    <ul class="main-nav__list">
-                      <li class="main-nav__item"><a href="/about-company/">
-                          <h3>О компании</h3>
-                        </a>
-                        <ul class="main-nav__sub-list">
-                          <li class="main-nav__item"><a class="main-nav__link" href="/about-company/">Знакомство с компанией <svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/geography-of-services/">География услуг<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/our-experience/">Наш опыт<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/about-company/facts/rating/">Рейтинги, Награды, Цифры<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/news/">Новости<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/career/">Карьера<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/about-company/why/">Почему “Пепеляев Групп”?<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/about-company/message-from-the-managing-partner/">Обращение Управляющего Партнера<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                        </ul>
-                      </li>
-                      <li class="main-nav__item"><a href="/practice-and-industry/">
-                          <h3>Услуги</h3>
-                        </a></li>
-                      <li class="main-nav__item"><a href="/to-get-the-team/">
-                          <h3>Команда </h3>
-                        </a></li>
-                    </ul>
-                  </div>
-                  <div class="main-nav__grid">
-                    <ul class="main-nav__list">
-                      <li class="main-nav__item"><a href="/analytics-and-brochures/">
-                          <h3>База знаний</h3>
-                        </a>
-                        <ul class="main-nav__sub-list">
-                          <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/legislation/">Обзоры<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/alerts/">Алерты<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/articles/">Статьи <svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/comments-in-the-media/">Комментарии в СМИ<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"> </use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/books/">Книги<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/journals/">Журналы<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/bankruptcy-must-read/">Банкротство: Must Read<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/presentations/">Презентации экспертов<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                        </ul>
-                      </li>
-                      <li class="main-nav__item"><a href="/lp/legalissuesofcovid/">
-                          <h3>COVID-19</h3>
-                        </a></li>
-                    </ul>
-                  </div>
-                  <div class="main-nav__grid">
-                    <ul class="main-nav__list">
-                      <li class="main-nav__item"><a href="/events/">
-                          <h3>Мероприятия</h3>
-                        </a>
-                        <ul class="main-nav__sub-list">
-                          <li class="main-nav__item"><a class="main-nav__link" href="/events/">Мероприятия<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/events/video/">Видеозаписи<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                        </ul>
-                      </li>
-                      <li class="main-nav__item"><a href="/contacts/">
-                          <h3>Контакты</h3>
-                        </a>
-                        <ul class="main-nav__sub-list">
-                          <li class="main-nav__item"><a class="main-nav__link" href="/contacts/moscow/">Москва<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/contacts/sankt-peterburg/">Санкт-Петербург <svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"> </use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/contacts/krasnoyarsk/">Красноярск<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"> </use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/contacts/yuzhno-sakhalinsk/">Южно-Сахалинск<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/contacts/vladivostok/">Владивосток<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/contacts/peck/">Пекин<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                          <li class="main-nav__item"><a class="main-nav__link" href="/contacts/shanghai/">Шанхай<svg class="main-nav__arrows" width="26px" height="24px">
-                                <use xlink:href="img/sprite.svg#arrow"></use>
-                              </svg></a></li>
-                        </ul>
-                      </li>
-                    </ul>
+              <nav class="main-nav" id="nav">
+                <div class="main-nav__inner">
+                  <div class="main-nav__row">
+                    <div class="main-nav__grid">
+                      <ul class="main-nav__list">
+                        <li class="main-nav__item"><a href="/about-company/">
+                            <h3>О компании</h3>
+                          </a>
+                          <ul class="main-nav__sub-list">
+                            <li class="main-nav__item"><a class="main-nav__link" href="/about-company/">Знакомство с компанией <svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/geography-of-services/">География услуг<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/our-experience/">Наш опыт<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/about-company/facts/rating/">Рейтинги, Награды, Цифры<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/news/">Новости<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/career/">Карьера<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/about-company/why/">Почему “Пепеляев Групп”?<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/about-company/message-from-the-managing-partner/">Обращение Управляющего Партнера<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                          </ul>
+                        </li>
+                        <li class="main-nav__item"><a href="/practice-and-industry/">
+                            <h3>Услуги</h3>
+                          </a></li>
+                        <li class="main-nav__item"><a href="/to-get-the-team/">
+                            <h3>Команда </h3>
+                          </a></li>
+                      </ul>
+                    </div>
+                    <div class="main-nav__grid">
+                      <ul class="main-nav__list">
+                        <li class="main-nav__item"><a href="/analytics-and-brochures/">
+                            <h3>База знаний</h3>
+                          </a>
+                          <ul class="main-nav__sub-list">
+                            <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/legislation/">Обзоры<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/alerts/">Алерты<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/articles/">Статьи <svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/comments-in-the-media/">Комментарии в СМИ<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"> </use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/books/">Книги<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/journals/">Журналы<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/bankruptcy-must-read/">Банкротство: Must Read<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/analytics-and-brochures/presentations/">Презентации экспертов<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                          </ul>
+                        </li>
+                        <li class="main-nav__item"><a href="/lp/legalissuesofcovid/">
+                            <h3>COVID-19</h3>
+                          </a></li>
+                      </ul>
+                    </div>
+                    <div class="main-nav__grid">
+                      <ul class="main-nav__list">
+                        <li class="main-nav__item"><a href="/events/">
+                            <h3>Мероприятия</h3>
+                          </a>
+                          <ul class="main-nav__sub-list">
+                            <li class="main-nav__item"><a class="main-nav__link" href="/events/">Мероприятия<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/events/video/">Видеозаписи<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                          </ul>
+                        </li>
+                        <li class="main-nav__item"><a href="/contacts/">
+                            <h3>Контакты</h3>
+                          </a>
+                          <ul class="main-nav__sub-list">
+                            <li class="main-nav__item"><a class="main-nav__link" href="/contacts/moscow/">Москва<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/contacts/sankt-peterburg/">Санкт-Петербург <svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"> </use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/contacts/krasnoyarsk/">Красноярск<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"> </use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/contacts/yuzhno-sakhalinsk/">Южно-Сахалинск<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/contacts/vladivostok/">Владивосток<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/contacts/peck/">Пекин<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                            <li class="main-nav__item"><a class="main-nav__link" href="/contacts/shanghai/">Шанхай<svg class="main-nav__arrows" width="26px" height="24px">
+                                  <use xlink:href="img/sprite.svg#arrow"></use>
+                                </svg></a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </nav>
-            <div class="search" id="search">
-              <div class="search__inner">
-                <div class="search__row"><svg class="search-close" id="search-close" width="20px" height="20px">
-                    <use xlink:href="img/sprite.svg#close"></use>
-                  </svg>
-                  <form class="search__form search__row" action="/search/" method="get"><input class="search__text" type="text" name="q" placeholder="Введите поисковый запрос" /><input class="search__submit" type="submit" value="Найти" /></form>
+              </nav>
+              <div class="search" id="search">
+                <div class="search__inner">
+                  <div class="search__row"><svg class="search-close" id="search-close" width="20px" height="20px">
+                      <use xlink:href="img/sprite.svg#close"></use>
+                    </svg>
+                    <form class="search__form search__row" action="/search/" method="get"><input class="search__text" type="text" name="q" placeholder="Введите поисковый запрос" /><input class="search__submit" type="submit" value="Найти" /></form>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
       </header>
       <div class="carousel">
         <div class="carousel__inner">
@@ -269,8 +255,43 @@ if(~navigator.appVersion.indexOf("Linux"))cth('linux');
     <div class="page__footer-wrapper">
       <footer class="page-footer" role="contentinfo">
         <div class="page-footer__inner">
-          <p>«Подвал»</p>
-          <p>Контактный телефон: <a href="tel:+70000000000">+7 000 000 00 00</a></p>
+          <div class="footer__inner">
+            <div class="footer__row">
+              <div class="footer__column1">
+                <div class="footer__logo"><svg class="icons" width="62px" height="43px">
+                    <use xlink:href="img/sprite.svg#logo_bottom"></use>
+                  </svg>
+                  <div class="footer__copyright"><span>© 2002-2020 PEPELIAEV GROUP</span><a href="#">юридические услуги</a></div>
+                </div>
+                <div class="footer__adress">Россия, 125047, г. Москва,<br>ул. 3-я Тверская-Ямская, д. 39, стр.1</div>
+              </div>
+              <div class="footer__column2">
+                <div class="footer__contacts"> <a href="tel:+74957670007"><span> Тел.:</span> +7 (495) 767 00 07</a><a href="mailto:info@pgplaw.ru"><span> E-mail:</span> info@pgplaw.ru</a></div>
+                <div class="footer__feedback"><a href="#"><svg class="icons" width="18px" height="18px">
+                      <use xlink:href="img/sprite.svg#callback"> </use>
+                    </svg><span>Заказать звонок</span></a><a href="#"><svg class="icons" width="20px" height="17px">
+                      <use xlink:href="img/sprite.svg#microphone"> </use>
+                    </svg><span>Подписаться на рассылку</span></a></div>
+              </div>
+              <div class="footer__column3">
+                <div class="footer__sotials">
+                  <div class="footer__title">Оставаться на связи</div>
+                  <div class="footer__icons"><a href="https://www.facebook.com/PepeliaevGroup"><svg class="icons" width="11px" height="23px">
+                        <use xlink:href="img/sprite.svg#fb"> </use>
+                      </svg></a><a href="http://www.linkedin.com/company/pepeliaev-group"><svg class="icons" width="18px" height="18px">
+                        <use xlink:href="img/sprite.svg#insta"> </use>
+                      </svg></a><a href="https://vk.com/pginternship"><svg class="icons" width="19px" height="12px">
+                        <use xlink:href="img/sprite.svg#vk"> </use>
+                      </svg></a><a href="https://www.youtube.com/channel/UCTI33e7sATSoEqzzZdZrXpA"><svg class="icons" width="16px" height="19px">
+                        <use xlink:href="img/sprite.svg#youtube"></use>
+                      </svg></a><a href="https://www.pgplaw.ru/news/press-releases/pepeliaev-group-in-telegram"><svg class="icons" width="18px" height="15px">
+                        <use xlink:href="img/sprite.svg#telegram"> </use>
+                      </svg></a></div>
+                </div>
+                <div class="footer__info"><a href="/legal-information/">Правовая информация</a><a href="/sitemap.php">Карта сайта</a><a href="/personal-data/">Политика обработки персональных данных</a></div>
+              </div>
+            </div>
+          </div>
         </div>
       </footer>
     </div>

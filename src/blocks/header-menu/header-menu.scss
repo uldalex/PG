@@ -5,8 +5,10 @@
 .header-menu {
 
   $block-name:                &; // #{$block-name}__element
-  @include col(md, 7);
-  @include col-offset(md, 2);
+  @include col(lg, 7);
+  @include col(md, 8);
+  @include col-offset(lg, 2);
+  @include col-offset(md, 1);
 
   &__list {
     display: flex;
@@ -36,5 +38,13 @@
   }
 
 } 
-
+@media (max-width:768px){
+ 
+  .header-menu {
+    &__item {
+    flex-direction: column;
+    
+  }
+  }
+}
 

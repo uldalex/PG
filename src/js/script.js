@@ -31,7 +31,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
         heightRatio: 1,
         perPage: 3,
         autoplay: true,
-        
+        breakpoints: {
+            768: {
+                heightRatio: 0.5,
+            },
+            600: {
+                heightRatio: 2,
+            },
+          }  
        
         } ).mount();
     } );
@@ -41,7 +48,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
             heightRatio: 0.5,
             perPage: 5,
             autoplay: true,
-            
+            breakpoints: {
+            768: {
+                heightRatio: 0.6,
+            },
+            600: {
+                heightRatio: 2,
+            },
+          }
            
             } ).mount();
         } );

@@ -12,6 +12,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
           type: 'loop',
           perPage: 3,
           autoplay: true,
-          } ).mount();
+          breakpoints: {
+            768: {
+                perPage: 2,
+            },
+            600: {
+                perPage: 1,
+            },
+          }} ).mount();
   } );
   
