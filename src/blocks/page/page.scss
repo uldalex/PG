@@ -559,6 +559,141 @@ text-decoration: none;
   align-items: center;
 }
 
+.practice {
+  &__inner {
+    @include container
+  }
+  &__row {
+    @include row();
+  }
+  &__content {
+    @include col(md, 8, $grid-columns, 40px)
+  }
+  &__branch {
+    @include col (md, 4)
+  }
+  &__list {
+    @include row();
+    margin:0;
+    padding:0;
+  } 
 
+  &__item {
+    @include col (md, 4);
+    @include col (sm, 6); 
+    list-style:none;
+    padding: 14px 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    & a {
+    color:#ffffff;
+    font-size: 1em;
+    line-height: 1.3em;
+    text-decoration:none;
+    padding: 14px 20px;
+    display: flex;
+    width:100%;
+    height:115px;
+    align-items: center;
+    justify-content: center;
+    }
+  }
+}
+.branch {
+
+  &__list {
+    @include row();
+    margin:0;
+    padding:0;
+  } 
+
+  &__item {
+    @include col (md, 6);
+    list-style:none;
+    padding: 14px 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+    & a {
+    color:#ffffff;
+    font-size: 1em;
+    line-height: 1.3em;
+    text-decoration:none;
+    padding: 14px 20px;
+    display: flex;
+    width:100%;
+    height:115px;
+    align-items: center;
+    justify-content: center;
+    }
+  }
+}
+
+.vaiolit{
+  background-color: rgb(132,70,173)
+}
+.blue {
+  background-color: rgb(2,135,181);
+}
+.grey {
+  background-color: rgb(143,172,176);
+}
+.red {
+  background-color: rgb(241,93,59);
+}
+.grey-dark {
+  background-color: rgb(86,119,142);
+}
+.yellow {
+  background-color: rgb(239,216,3);
+}
+.green-light {
+  background-color: rgb(190,198,123);
+}
+.blue-dark {
+  background-color: rgb(0,92,157);
+}
+.vaiolit-light {
+  background-color: rgb(166,126,184);
+}
+.rose {
+  background-color: rgb(241,111,135);
+}
+.bege{
+  background-color: rgb(219,198,157);
+}
+.blue-light {
+  background-color: rgb(35,146,214);
+}
+.bordo {
+  background-color: rgb(106,45,68);
+}
+.rose-light {
+background-color: rgb(242,128,162);
+}
+.red-dark {
+  background-color: rgb(226,88,41);
+}
+.vaiolit-tein{
+  background-color: rgb(211,179,213);
+}
+.rose-dark {
+  background-color: rgb(217,38,45);
+}
+.vaiolit-superlight {
+  background-color: rgb(200,161,250);
+}
+.green-blue {
+  background-color: rgb(18,163,161);
+}
+.blue-green {
+  background-color: rgb(124,199,156);
+}
+.green-dark {
+  background-color: rgb(73,131,98);
+}
 
 
