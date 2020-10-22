@@ -155,24 +155,21 @@ src: url('fonts/Geometria-Light.woff2') format('woff2');
 font-weight: 300;
 font-style: normal;
 }
-html {
+html, body {
   overflow-x: hidden;
 }
 body {
-  display: flex;           // Исправляем баг в IE для min-height and flexbox (flex-direction:column)
-  flex-direction: column;  // и прижимаем footer в IE 10-11
-  margin: 0;
   min-height: 100%;
-  word-break: break-word;
+  margin: 0;
+  padding: 0;
   font-family: $font-family;
   font-size: $font-size;
   line-height: $line-height;
   text-align: left;
   color: $text-color;
   background-color: $body-bg;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale
+  overflow-x: hidden;
+ position: relative;
 }
 
 [tabindex='-1']:focus {
@@ -487,19 +484,28 @@ h2{
 
 .about__inner {
   @include container();
-  padding: 3rem 0;
+ 
 }
 .about__row {
-  @include row();
+  @include row(
+    $xs-grid-gutter:  0, 
+    $sm-grid-gutter:  0,              
+    $md-grid-gutter: 0 );
 }
+
 .about__content {
-  @include col(lg, 8, $grid-columns, 40px);
-  @include col(md, 12, $grid-columns, 10px);
+  @include col(xl, 8, $grid-columns, 40px);
+  @include col(lg, 6, $grid-columns, 40px);
+  @include col(md, 12);
 }
 .about__events {
-  @include col(lg, 4);
+  @include col(xl, 4);
+  @include col(lg, 6);
   @include col(md, 12);
-  @include row();
+  @include row(
+    $xs-grid-gutter:  0, 
+    $sm-grid-gutter:  0,              
+    $md-grid-gutter: 0 );
 }
 .about__title {
   font-family: 'GeometriaMedium';
@@ -507,12 +513,11 @@ h2{
   margin-bottom:1rem;
 }
 .about__text {
-  @include row();
+  @include row($sm-grid-gutter:  0, );
   text-align: justify;
 }
 .about-text__before {
-  @include col(md, 1)
-  @include col(sm, 3)
+  @include col(md,1)
 
   & figure {
     margin: 0px;
@@ -528,7 +533,7 @@ h2{
 }
 .about-text__content {
   @include col(md, 11);
-  @include col(sm, 7); 
+ 
 }
 .about-text__content p {
   padding: 0 5rem 0 1rem;
@@ -579,18 +584,23 @@ font-family:'GeometriaLight';
     @include container
   }
   &__row {
-    @include row();
+    @include row(
+      $xs-grid-gutter:  0, 
+      $sm-grid-gutter:  0,              
+      $md-grid-gutter: 0 );
   }
   &__content {
-    @include col(lg, 8, $grid-columns, 40px);
+    @include col(xl, 8, $grid-columns, 40px);
+    @include col(lg, 6, $grid-columns, 40px);
     @include col(md, 12, $grid-columns, 10px)
   }
   &__branch {
-    @include col (lg, 4);
+    @include col (xl, 4);
+    @include col (lg, 6);
     @include col (md, 12)
   }
   &__list {
-    @include row();
+    @include row($sm-grid-gutter:  0, );
     margin:0;
     padding:0;
     height: 278px;
@@ -598,7 +608,8 @@ font-family:'GeometriaLight';
   } 
 
   &__item {
-    @include col (md, 4);
+    @include col (xl, 4);
+    @include col (lg, 6);
     @include col (sm, 6); 
     list-style:none;
     padding: 14px 20px;
@@ -713,7 +724,7 @@ font-family:'GeometriaLight';
 .branch {
   
   &__list {
-    @include row();
+    @include row($sm-grid-gutter:  0, );
     margin:0;
     padding:0;
     height: 278px;
@@ -923,10 +934,14 @@ background-color: rgb(242,128,162);
     @include container
   }
   &__row {
-    @include row();
+    @include row(
+      $xs-grid-gutter:  0, 
+      $sm-grid-gutter:  0,              
+      $md-grid-gutter: 0 );
   }
   &-content {
-    @include col(lg, 7, $grid-columns, 60px);
+    @include col(xl, 7, $grid-columns, 60px);
+    @include col(lg, 6, $grid-columns, 60px);
     @include col(md, 12, $grid-columns, 10px);
     border-right: 1px solid #DBDBDB;
     
@@ -961,7 +976,8 @@ background-color: rgb(242,128,162);
 
   }
   &-block {
-    @include col(lg, 4);
+    @include col(xl, 4);
+    @include col(lg, 6);
     @include col(md, 12);
    
    & h3{
@@ -1170,7 +1186,10 @@ background-color: rgb(242,128,162);
   }
 
   &__row {
-    @include row();
+    @include row(
+    $xs-grid-gutter:  0, 
+    $sm-grid-gutter:  0,              
+    $md-grid-gutter: 0 );
   }
   &__column1 {
     @include col (lg, 4);
@@ -1180,16 +1199,18 @@ background-color: rgb(242,128,162);
     
   }
   &__column2 {
-    @include col (lg, 3);
+    @include col (xl, 3);
+    @include col (lg, 4);
     @include col (md, 6);
-    @include col-offset(lg, 1);
+    @include col-offset(xl, 1);
     color: #272C3E;
     
   }
   &__column3 {
-    @include col (lg, 3);
+    @include col (xl, 3);
+    @include col (lg, 4);
     @include col (md, 12);
-    @include col-offset(lg, 1);
+    @include col-offset(xl, 1);
     color: #272C3E;
     
   }
@@ -1267,6 +1288,74 @@ background-color: rgb(242,128,162);
   }
 }
 }
+@media (max-width:1024px){
+  .footer{
+    &__info {
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+  } 
+  .victory__slide {
+    padding: 50px 30px;
+}
+  .burger{
+    position: absolute;
+    right:15px;
+  }
+  #victory .splide__arrow--prev{
+    left:20px;
+  }
+  #victory .splide__arrow--next{
+    right:-20px;
+  }
+  .victory .splide__slide {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+.splide {
+  overflow: hidden;
+}
+
+
+.splide .splide__slide {
+  position: relative;
+  border: 0 solid transparent;
+  opacity: 1;
+  max-width: 100vw;
+}
+
+.main-nav--open{
+  max-height: 80vh;
+    overflow: scroll;
+}
+.search-close {
+  right: 15px;
+}
+.about-text__content p {
+  padding: 0 1rem 0 3rem;
+}
+.news-content__item a {
+  margin-right: 1rem;
+}
+.slide-desckription{
+  top:10%;
+  left: 10%;
+    right: 30%;
+    width: auto;
+}
+.slide-desckription h3 {
+  font-size: 24px;
+  max-width: 100%;
+}
+.slide-desckription__text {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 100%;
+}
+
+}
 @media (max-width:768px){
   .footer{
     &__sotials {
@@ -1275,6 +1364,9 @@ background-color: rgb(242,128,162);
     }
     &__info {
       text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
   } 
@@ -1282,11 +1374,14 @@ background-color: rgb(242,128,162);
     position: absolute;
     right:15px;
   }
+  .victory__slide {
+    padding: 100px 30px;
+}
   #victory .splide__arrow--prev{
-    left:10px;
+    left:20px;
   }
   #victory .splide__arrow--next{
-    right:-40px;
+    right:-20px;
   }
   .victory .splide__slide {
     padding: 1rem 0.5rem 1rem 0.5rem;
@@ -1296,19 +1391,65 @@ background-color: rgb(242,128,162);
 }
 .news-content{
   max-width: 100vw;
+  margin-bottom:2rem;
+  
 }
 .news-block{
   max-width: 100vw;
 }
+
+.splide .splide__slide {
+  position: relative;
+  border: 0 solid transparent;
+  opacity: 1;
+  max-width: 100vw;
+}
+.footer__column3 {
+  max-width:100vw;
+}
+.main-nav--open{
+  max-height: 80vh;
+    overflow: scroll;
+}
+.search-close {
+  right: 15px;
+}
 .about-text__content p {
   padding: 0 1rem 0 1rem;
 }
+.news-content__item a {
+  margin-right: 1rem;
 }
+.slide-desckription{
+  top:10%;
+  left: 10%;
+    right: 30%;
+    width: auto;
+}
+.slide-desckription h3 {
+  font-size: 24px;
+  max-width: 100%;
+}
+.slide-desckription__text {
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 100%;
+}
+
+}
+
 @media (max-width:600px){
   .page-header {
     padding-top: 0rem;
     padding-bottom: 0.5rem;
   }
+  .search__text {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.search-close{
+  z-index: 100;
+}
   .logo{
   justify-content: center;
   }
@@ -1333,6 +1474,7 @@ figure {
 }
 .news-content{
   max-width: 100vw;
+  border-right:0px;
 }
 .news-block{
   max-width: 100vw;
@@ -1373,16 +1515,65 @@ figure {
   right: -20px;
 }
 .about__event {
-  flex-direction: column;
+  flex-basis: 100%;
+  margin: 0 auto;
 }
 .victory {
   background-color: #f3ecf3;
   margin-bottom: 0px;
   padding: 10px 0;
 }
+.about__text {
+  display: block;
+}
+.about-text__before{
+  width:72px;
+  flex-basis: 72px;
+  float:left;
+  margin-right: 20px;
+}
+.about-text__date{
+  width:80px;
+  flex-basis: 80px;
+}
+.about-text__event-content {
+  margin-left: 15px;
+  max-width: 70%;
+}
+.news__row{
+  display: block;
+}
+.about__events {
+  padding-bottom: 1rem;
+}
+.victory__slide a{
+  font-size: 16px;
+}
+.victory__slide{
+  padding:40px 40px;
+  height: 300px;
+  margin-bottom: 0px;
+  margin-top:0px;
+}
+.footer__column3 {
+  max-width:100vw;
+}
+.footer__sotials {
+  align-items: flex-start;
+}
+.footer__info a{
+  margin: 0 0 0 5px;
+}
+.about-text__content p {
+  padding: 0 0rem 0 0rem;
+}
 }
 @media (max-width:340px){
   .footer__info a{
     margin:0;
+  }
+  .footer__info a{
+    margin: 0 0 0 0px;
+    font-size: 12px;
   }
 }

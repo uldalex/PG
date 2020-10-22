@@ -6,8 +6,8 @@ $screen-xl:                   1200px !default;
 $screen-xlx:                  1400px !default;
 $screen-xxl:                  1800px !default;
 
-$container-sm:                100% !default;
-$container-md:                100% !default;
+$container-sm:                ($screen-sm - 10) !default;
+$container-md:                ($screen-md - 10) !default;
 $container-lg:                ($screen-lg - 10) !default;
 $container-xl:                ($screen-xl - 30) !default;
 $container-xlx:                ($screen-xlx - 30) !default;
@@ -123,8 +123,8 @@ $grid-gutter-width:           30px !default;
 //------------------------------------------------------------------------------
 
 @mixin row (
-  $xs-grid-gutter:  $grid-gutter-width,
-  $sm-grid-gutter:  $grid-gutter-width,
+  $xs-grid-gutter:  0,
+  $sm-grid-gutter:  0,
   $md-grid-gutter:  $grid-gutter-width,
   $lg-grid-gutter:  $grid-gutter-width,
   $xl-grid-gutter:  $grid-gutter-width,

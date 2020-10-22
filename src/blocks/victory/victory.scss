@@ -10,9 +10,13 @@
   padding: 30px 0;
   
   
-  &__inner{
+  &__inner {
     @include container();
   }
+  &__row {
+    padding-left: 15px;
+    padding-right: 15px;
+   }
   &__list {
     margin:0;
     padding:0;
