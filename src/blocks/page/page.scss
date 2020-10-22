@@ -560,6 +560,8 @@ text-decoration: none;
 }
 
 .practice {
+  border-bottom: 10px solid rgba(126,46,122,.1);
+    padding-bottom: 2.8rem;
   &__inner {
     @include container
   }
@@ -576,6 +578,8 @@ text-decoration: none;
     @include row();
     margin:0;
     padding:0;
+    height: 278px;
+    overflow: hidden;
   } 
 
   &__item {
@@ -586,7 +590,16 @@ text-decoration: none;
     display:flex;
     justify-content: center;
     align-items: center;
+    opacity:0;
+    transition-duration: 1.3s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1.3s;
+    -webkit-transition-timing-function: ease;
+    animation-name: blurout;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
     
+     
     & a {
     color:#ffffff;
     font-size: 1em;
@@ -600,13 +613,96 @@ text-decoration: none;
     justify-content: center;
     }
   }
+  &__item:nth-child(1n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.6s;
+  } 
+  &__item:nth-child(2n) {
+    animation-delay: 0.2s;
+    animation-duration: 5.7s;
+  }
+  &__item:nth-child(3n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.8s;
+  } 
+  &__item:nth-child(4n) {
+    animation-delay: 0.4s;
+    animation-duration: 5.9s;
+  } 
+  &__item:nth-child(5n) {
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+  }  
+  &__item:nth-child(6n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.6s;
+  } 
+  &__item:nth-child(7n) {
+    animation-delay: 0.2s;
+    animation-duration: 5.7s;
+  }
+  &__item:nth-child(8n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.8s;
+  } 
+  &__item:nth-child(9n) {
+    animation-delay: 0.4s;
+    animation-duration: 5.9s;
+  } 
+  &__item:nth-child(10n) {
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+  } 
+  &__item:nth-child(11n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.6s;
+  } 
+  &__item:nth-child(12n) {
+    animation-delay: 0.2s;
+    animation-duration: 5.7s;
+  }
+  &__item:nth-child(13n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.8s;
+  } 
+  &__item:nth-child(14n) {
+    animation-delay: 0.4s;
+    animation-duration: 5.9s;
+  } 
+  &__item:nth-child(15n) {
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+  } 
+  &__item:nth-child(16n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.6s;
+  } 
+  &__item:nth-child(17n) {
+    animation-delay: 0.2s;
+    animation-duration: 5.7s;
+  }
+  &__item:nth-child(18n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.8s;
+  } 
+  &__item:nth-child(19n) {
+    animation-delay: 0.4s;
+    animation-duration: 5.9s;
+  } 
+  &__item:nth-child(20n) {
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+  }    
 }
-.branch {
 
+.branch {
+  
   &__list {
     @include row();
     margin:0;
     padding:0;
+    height: 278px;
+    overflow: hidden;
   } 
 
   &__item {
@@ -616,6 +712,16 @@ text-decoration: none;
     display:flex;
     justify-content: center;
     align-items: center;
+    opacity:0;
+    transition-duration: 1.3s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1.3s;
+    -webkit-transition-timing-function: ease;
+    animation-name: blurout;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-delay: 0.2s;
+    animation-duration: 5.5s;
     
     & a {
     color:#ffffff;
@@ -630,8 +736,102 @@ text-decoration: none;
     justify-content: center;
     }
   }
+  &__item:nth-child(1n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.2s;
+  } 
+  &__item:nth-child(2n) {
+    animation-delay: 0.2s;
+    animation-duration: 5.1s;
+  }
+  &__item:nth-child(3n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.4s;
+  } 
+  &__item:nth-child(4n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.1s;
+  } 
+  &__item:nth-child(5n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.0s;
+  }  
+  &__item:nth-child(6n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.2s;
+  } 
+  &__item:nth-child(7n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.7s;
+  }
+  &__item:nth-child(8n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.2s;
+  } 
+  &__item:nth-child(9n) {
+    animation-delay: 0.4s;
+    animation-duration: 5.0s;
+  } 
+  &__item:nth-child(10n) {
+    animation-delay: 0.5s;
+    animation-duration: 5.5s;
+  } 
+  &__item:nth-child(11n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.6s;
+  } 
+  &__item:nth-child(12n) {
+    animation-delay: 0.2s;
+    animation-duration: 5.7s;
+  }
+  &__item:nth-child(13n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.8s;
+  } 
+  &__item:nth-child(14n) {
+    animation-delay: 0.4s;
+    animation-duration: 5.9s;
+  } 
+  &__item:nth-child(15n) {
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+  } 
+  &__item:nth-child(16n) {
+    animation-delay: 0.1s;
+    animation-duration: 5.6s;
+  } 
+  &__item:nth-child(17n) {
+    animation-delay: 0.2s;
+    animation-duration: 5.7s;
+  }
+  &__item:nth-child(18n) {
+    animation-delay: 0.3s;
+    animation-duration: 5.8s;
+  } 
+  &__item:nth-child(19n) {
+    animation-delay: 0.4s;
+    animation-duration: 5.9s;
+  } 
+  &__item:nth-child(20n) {
+    animation-delay: 0.5s;
+    animation-duration: 6s;
+  } 
+  
 }
-
+@keyframes blurout {
+  0% {
+      opacity: 0
+  }
+  15% {
+      opacity: 1
+  }
+  75% {
+      opacity: 1
+  }
+   100% {
+      opacity: 0
+  } 
+}
 .vaiolit{
   background-color: rgb(132,70,173)
 }
