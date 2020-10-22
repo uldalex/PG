@@ -5,7 +5,9 @@
 .carousel {
 
   $block-name: &; // #{$block-name}__element
-  margin-top:114px;
+  max-width: 1900px;
+    margin: 0 auto;
+    margin-top:114px;
 
   figure {
     margin: 0;

@@ -28,6 +28,7 @@ var childrenBranch = [].slice.call(branch.children)
 document.addEventListener( 'DOMContentLoaded', function () {
     var splide =new Splide( '#news-block', {
         direction   : 'ttb',
+        type: 'loop',
         heightRatio: 1,
         perPage: 3,
         autoplay: true,
@@ -48,6 +49,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
 document.addEventListener( 'DOMContentLoaded', function () {
         var splide =new Splide( '#news-content', {
             direction   : 'ttb',
+            type: 'loop',
             heightRatio: 0.5,
             perPage: 5,
             autoplay: true,
