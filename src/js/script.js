@@ -25,3 +25,23 @@ var childrenBranch = [].slice.call(branch.children)
                         }
                     }, 5500);
                    
+document.addEventListener( 'DOMContentLoaded', function () {
+    var splide =new Splide( '#news-block', {
+        direction   : 'ttb',
+        heightRatio: 1,
+        perPage: 3,
+        autoplay: true,
+        
+       
+        } ).mount();
+    } );
+document.addEventListener( 'DOMContentLoaded', function () {
+        var splide =new Splide( '#news-content', {
+            direction   : 'ttb',
+            heightRatio: 0.5,
+            perPage: 5,
+            autoplay: true,
+            
+           
+            } ).mount();
+        } );

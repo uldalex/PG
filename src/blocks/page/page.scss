@@ -553,6 +553,7 @@ margin-left:15px;
 .about-text__event-content a{
 color: #272C3E;
 text-decoration: none;
+font-family:'GeometriaLight';
 }
 .about__event {
   display: flex;
@@ -896,4 +897,245 @@ background-color: rgb(242,128,162);
   background-color: rgb(73,131,98);
 }
 
+.news {
+     padding-bottom: 3rem;
+     padding-top: 3rem;
+     
+  & h3 {
+    margin-top:0;
+    margin-bottom: 28px;
+  }
+  &__inner {
+    @include container
+  }
+  &__row {
+    @include row();
+  }
+  &-content {
+    @include col(md, 7, $grid-columns, 60px);
+    border-right: 1px solid #DBDBDB;
+    
+
+    &__list {
+      margin:0;
+      padding:0;
+      flex-direction: column;
+    }
+    &__item {
+      list-style: none;
+      margin:1.5rem 0;
+
+      & a {
+        display:block;
+        position:relative;
+        color: #272C3E;
+        text-decoration: none;
+        margin-left: 27px;
+      }
+      & a:before {
+        content:"";
+        width:9px;
+        height:9px;
+        background-color: #7E2E84;
+        position: absolute;
+        left:-27px;
+        top: 6px;
+
+      }
+    }
+
+  }
+  &-block {
+    @include col(md, 4);
+   
+   & h3{
+      padding-left: 2.4rem;  
+    }
+
+    &__list {
+      margin:0;
+      padding:0;
+      padding-left: 2.5rem;
+      flex-direction: column;
+      
+    }
+    &__item {
+      list-style: none;
+      margin:1rem 0;
+            
+      & a{
+        display: flex;
+        align-items: center;
+        margin-top:7px;
+        font-size: 15px;
+        font-family:'GeometriaLight';
+      }
+
+      & svg {
+        stroke: #852E81;
+        margin-left:5px;
+      }
+    }
+  &__date {
+    background-color: #7E2E84;
+    display: inline-block;
+    color: #ffffff;
+    padding: 0.2rem 1rem;
+    margin-bottom: 11px;
+  }
+  }
+}
+#news-block {
+  
+  .splide__pagination {
+    display: flex;
+    justify-content: center;
+
+
+    & li {
+      list-style:none;
+    }
+ 
+     &__page {
+       display: inline-block;
+       width: 12px;
+       height: 12px;
+       background: transparent;
+       margin: 7px;
+       background-color: #F2EBF3;
+       border: 1px solid #F2EBF3;
+       padding: 0;
+       transition: transfrom 0.2s linear;
+ 
+      
+ 
+       &.is-active {
+        background-color:#7E2E84;
+        border: 1px solid #7E2E84;
+ 
+         > span {
+           opacity: 1;
+         }
+       }
+ 
+       &:hover {
+         cursor: pointer;
+       }
+ 
+       &:focus {
+         outline: none;
+       }
+     }
+   }
+  & .splide__arrow {
+    transform: translate( -50%, 0 );
+
+    &--prev {
+      top: 93.5%;
+      left: 35%;
+      transform: scale(0.5);
+
+      svg {
+        transform: rotateZ( 0deg );
+        stroke:#7E2E84;
+        transition: 0.5s;
+      }
+
+      path {
+        fill: $black;
+        fill-rule: evenodd;
+        transition: 0.5s;
+      }
+    }
+
+    &--next {
+      top: 93.5%;
+      right: 25%;
+      transform: scale(0.5);
+
+      svg {
+        transform: rotateZ( 180deg );
+        stroke:#7E2E84;
+        transition: 0.5s;
+      }
+    }
+  }
+}
+
+#news-content {
+  
+  .splide__pagination {
+    display: flex;
+    justify-content: center;
+
+
+    & li {
+      list-style:none;
+    }
+ 
+     &__page {
+       display: inline-block;
+       width: 12px;
+       height: 12px;
+       background: transparent;
+       margin: 7px;
+       background-color: #F2EBF3;
+       border: 1px solid #F2EBF3;
+       padding: 0;
+       transition: transfrom 0.2s linear;
+ 
+      
+ 
+       &.is-active {
+        background-color:#7E2E84;
+        border: 1px solid #7E2E84;
+ 
+         > span {
+           opacity: 1;
+         }
+       }
+ 
+       &:hover {
+         cursor: pointer;
+       }
+ 
+       &:focus {
+         outline: none;
+       }
+     }
+   }
+  & .splide__arrow {
+    transform: translate( -50%, 0 );
+
+    &--prev {
+      top: 93.5%;
+      left: 40%;
+      transform: scale(0.5);
+
+      svg {
+        transform: rotateZ( 0deg );
+        stroke:#7E2E84;
+        transition: 0.5s;
+      }
+
+      path {
+        fill: $black;
+        fill-rule: evenodd;
+        transition: 0.5s;
+      }
+    }
+
+    &--next {
+      top: 93.5%;
+      right: 35%;
+      transform: scale(0.5);
+
+      svg {
+        transform: rotateZ( 180deg );
+        stroke:#7E2E84;
+        transition: 0.5s;
+      }
+    }
+  }
+}
 

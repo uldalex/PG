@@ -171,6 +171,10 @@ $spinner-size: 20px;
  
 }
 #victory {
+  .splide__pagination {
+    display:none;
+     
+   }
   & .splide__arrow {
     transform: translate( -50%, 0 );
 
