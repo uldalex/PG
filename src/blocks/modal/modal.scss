@@ -23,6 +23,7 @@
   .js-modal-open & {
     overflow-x: hidden;
     overflow-y: auto;
+    background-color: rgba(39, 44, 62,  0.7)
   }
 
   &__dialog {
@@ -32,7 +33,7 @@
     margin: 0;
 
     @media (min-width: $screen-lg) {
-      width: 600px;
+      width: 400px;
       margin: auto;
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -51,7 +52,7 @@
     position: relative;
     min-width: 100%;
     min-height: 100%;
-    background-color: #fff;
+    background-color: #f2e9f1;
     outline: 0;
   }
 
@@ -61,23 +62,92 @@
   }
 
   &__title {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-    font-size: $font-size-h4;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    font-size: 24px;
+    text-align: center;
     line-height: 1.2;
-    font-weight: 700;
+    line-height: 1.2;
+    font-family: 'GeometriaMedium';
     color: currentColor;
   }
 
   &__close {
     position: absolute !important; // stylelint-disable-line  declaration-no-important
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 15px;
+    width: 20px;
   }
 
   &__body {
     flex-grow: 1;
     padding: 0 15px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+
+    & .form-control {
+      display: flex;
+      flex-direction: column;
+    }
+    & .form-radio {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+    & input {
+      border: 1px solid #7E2E84;
+      line-height: 2rem;
+      color: #7E2E84;
+      outline: none;
+      
+      &:focus{
+        border:2px solid #84097d;
+      }
+    }
+    & input.button {
+      background: #7e2e84;
+      color: #ffffff;
+      font-size: 14px;
+      
+      &:hover, &:active, &:focus {
+        background-color: #84097d;
+      }
+    }
+    & textarea {
+      width: 100%;
+      outline: none;
+      border: 1px solid #7E2E84;
+      min-height:77px;
+      &:focus{
+        border:2px solid #84097d;
+      }
+    }
+    & .form-link{
+      font-size: 12px;
+      text-align: right;
+      padding: 1rem 0;
+    }
+    & p {
+      padding: 1rem 0;
+    text-align: center;
+    }
+    & .form-agreement{
+    font-size: 12px;
+    text-align: justify;
+    padding: 0.5rem 0 2rem 0;
+
+    & input {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+    }
+
   }
 
   &__footer {

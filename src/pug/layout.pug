@@ -39,26 +39,75 @@ html(class='page  no-js', lang='ru')
               li#search-toggler.header-menu__item
                 svg(class="icons" width="18px" height="18px")
                   use(xlink:href="img/sprite.svg#search")
-                a.header-menu__link.header-menu__search(href="#") <span>Поиск<span>
+                a.header-menu__link.header-menu__search(href="#") <span>Поиск</span>
               li.header-menu__item
                 a.header-menu__link.header-menu__phone(href="tel:+74957670007")
                   svg(class="icon-fill" width="20px" height="20px")
                     use(xlink:href="img/sprite.svg#phone")
-                  <span>+7 (495) 767-00-07<span>
+                  <span>+7 (495) 767-00-07</span>
               li.header-menu__item
-                a.header-menu__link.header-menu__link.header-menu__aut(href="#") 
+                a#aut_btn.header-menu__link.header-menu__link.header-menu__aut(href="#aut" data-toggle="modal" data-target="#aut") 
                   svg(class="icon-fill" width="19px" height="19px")
                     use(xlink:href="img/sprite.svg#aut")
-                  <span> Личный кабинет<span>
+                  <span> Личный кабинет</span>
               ll.header-menu__item
-                a.header-menu__link.header-menu__language(href="#")
-                  svg(class="flags" width="18px" height="12px")
-                    use(xlink:href="img/sprite.svg#flag_rf")
-                  <span> Русский <span>
-                  svg(class="icons" width="8px" height="8px")
+                a#header-menu__language.header-menu__link.header-menu__language(href="#")
+                  svg(class="flags" width="20px" height="20px")
+                    use(xlink:href="img/sprite.svg#russia")
+                  <span> Русский </span>
+                  svg(id="arrow_down" class="icons arrow_down" width="8px" height="8px")
                     use(xlink:href="img/sprite.svg#arrow_down")
-                
-
+                ul#language-list.header-menu__language-list
+                  li
+                    a.flagsen(href="#") 
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#en")
+                      span English
+                  li
+                    a.flagscn(href="#")
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#china")
+                      span 中文
+                  li
+                    a.flagskr(href="#")
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#south-korea")
+                      span 한국어
+                  li
+                    a.flagsde(href="#")
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#ge")
+                      span Deutsch
+                  li
+                    a.flagsit(href="#")
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#italy")
+                      span Italiano
+                  li
+                    a.flagsesp(href="#")
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#spain")
+                      span Español
+                  li
+                    a.flagsesp(href="#")
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#france")
+                      span Français
+                  li
+                    a.flagsjp(href="#") 
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#japan")
+                      span 日本語
+                  li
+                    a.flagsport(href="#") 
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#portugal")
+                      span Português
+                  li
+                    a.flagsturk(href="#")
+                      svg(class="flags" width="18px" height="18px")
+                        use(xlink:href="img/sprite.svg#turkey")
+                      span Türkçe
           //- navigation
           block nav
           //- cearch
@@ -297,11 +346,11 @@ html(class='page  no-js', lang='ru')
                     a(href="tel:+74957670007") <span> Тел.:</span> +7 (495) 767 00 07
                     a(href="mailto:info@pgplaw.ru") <span> E-mail:</span> info@pgplaw.ru
                   .footer__feedback
-                    a(href="#")
+                    a(href="#feedback" data-toggle="modal" data-target="#feedback")
                      svg(class="icons" width="18px" height="18px")
                               use(xlink:href="img/sprite.svg#callback") 
                      span Заказать звонок
-                    a(href="#")
+                    a(href="https://www.pgplaw.ru/login/")
                      svg(class="icons" width="20px" height="17px")
                               use(xlink:href="img/sprite.svg#microphone") 
                      span Подписаться на рассылку
@@ -333,6 +382,52 @@ html(class='page  no-js', lang='ru')
 
                     
             
-
+    +modal("aut","Вход|Регистрация")
+        .modal__body 
+          form#login_form.modal__form
+            input(name="BACK_URL" type="hidden" value="/login/")
+            .form-control
+              label(for="LOGIN") E-mail
+              input#LOGIN.require(required="required" name="LOGIN" type="text" autocomplete="off")
+            .form-control
+              label(for="PASSWORD") Пароль
+              input#PASSWORD.require(required="required" name="PASSWORD" type="password" autocomplete="off")
+            .form-control
+              a.form-link(href="/login/register.php?forgot_password=yes") Забыли пароль?
+            .form-control
+              input.button(type="submit" value="Войти")
+            .form-control
+              p
+               a(href="https://pgplaw.com/login/register.php?register=yes") Click here
+               span  to subscribe our English newsletters
+    
+    +modal("feedback","Заказать звонок")
+        .modal__body 
+          form#feedback_form.modal__form
+            .form-control
+              label(for="lastname") Фамилия
+              input#lastname.require(required="required" name="lastname" type="text" autocomplete="off")
+            .form-control
+              label(for="name") Имя
+              input#name.require(required="required" name="name" type="text" autocomplete="off")
+            .form-control
+              label(for="phone") Телефон с кодом страны и города
+              input#phone.require(required="required" name="phone" type="text" autocomplete="off")
+            .form-radio
+              input#property.require(required="required" name="property" type="radio" autocomplete="off")
+              label(for="property") Физическое лицо
+              input#company.require(required="required" name="property" type="radio" autocomplete="off")
+              label(for="company") Юридическое лицо
+            .form-control
+            label(for="message") Суть вашего вопроса
+              textarea#message(name="message" required="required") 
+             
+            .form-control
+              input.button(type="submit" value="Заказать звонок")
+            .form-agreement
+              input#agreement.required(type="checkbox" required="required" name="agreement" checked="checked" )
+              label(for="agreement") «Настоящим соглашаюсь на обработку ООО «Пепеляев Групп» моих персональных данных, указанных в заполненной мной форме на сайте <a href="www.pgplaw.ru">www.pgplaw.ru</a> в целях установления со мной контакта» 
+             
     block page-bottom
       script(src='js/bundle.js')
+
