@@ -6,14 +6,13 @@
 
   $block-name: &; // #{$block-name}__element
   max-width: 1900px;
-    margin: 0 auto;
-    margin-top:114px;
+  margin: 0 auto;
+  margin-top: 114px;
 
   figure {
     margin: 0;
     padding: 0;
   }
-
 }
 // Arrow button size.
 $arrow-button-size: 2em !default;
@@ -72,10 +71,6 @@ $spinner-size: 20px;
     position: relative;
   }
 
-  &__spinner {
- 
-  }
-
   &__track {
     position: relative;
     z-index: 0;
@@ -98,10 +93,9 @@ $spinner-size: 20px;
 
     svg {
       transition: 0.5s;
-      stroke:#ffffff;
+      stroke: #ffffff;
     }
 
- 
     path {
       fill: $black;
       fill-rule: evenodd;
@@ -114,7 +108,7 @@ $spinner-size: 20px;
 
       svg {
         transition: 0.5s;
-        stroke:#f2e9f1;
+        stroke: #f2e9f1;
       }
 
       circle {
@@ -134,16 +128,7 @@ $spinner-size: 20px;
     &:focus {
       outline: none;
     }
-
-
-
-
   }
-
-
-  //pagination
-
- 
 
   //progress
 
@@ -158,7 +143,7 @@ $spinner-size: 20px;
 
   #{$root}__slide {
     position: relative;
-    border: 0px solid transparent;
+    border: 0 solid transparent;
     opacity: 1;
 
     div {
@@ -216,17 +201,18 @@ $spinner-size: 20px;
     }
   }
 }
+
 .slide-desckription {
- position: absolute;
- @include container();
- margin:0 auto;
- left: 0;
- right: 0;
- top:30%;
-  z-index:10;
- color: #ffffff;
- text-transform: uppercase;
- 
+  position: absolute;
+  @include container();
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 30%;
+  z-index: 10;
+  color: #ffffff;
+  text-transform: uppercase;
+
  & h3 {
     font-size: 34px;
     max-width:50%;
@@ -239,8 +225,8 @@ $spinner-size: 20px;
 }
 
 #carousel{
+
   .splide__pagination {
-  display:none;
-   
+  display: none;
  }
 }
