@@ -31,6 +31,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         type: 'loop',
         heightRatio: 1,
         perPage: 3,
+        perMove: 1,
         autoplay: true,
         breakpoints: {
             1024: {
@@ -50,6 +51,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
         var splide =new Splide( '#news-content', {
             direction   : 'ttb',
             type: 'loop',
+            perMove: 1,
             heightRatio: 0.5,
             perPage: 5,
             autoplay: true,
