@@ -34,8 +34,11 @@ document.addEventListener( 'DOMContentLoaded', function () {
         perMove: 1,
         autoplay: true,
         breakpoints: {
+            1200: {
+                heightRatio: 1.3,
+            },
             1024: {
-                heightRatio: 0.8,
+                heightRatio: 0.85,
             },
             768: {
                 heightRatio: 0.5,
@@ -52,12 +55,15 @@ document.addEventListener( 'DOMContentLoaded', function () {
             direction   : 'ttb',
             type: 'loop',
             perMove: 1,
-            heightRatio: 0.5,
+            heightRatio: 0.58,
             perPage: 5,
             autoplay: true,
             breakpoints: {
+            1200: {
+                    heightRatio: 0.72,
+                    },
             1024: {
-                heightRatio: 0.8,
+                heightRatio: 0.85,
                 },
             768: {
                 heightRatio: 0.6,
