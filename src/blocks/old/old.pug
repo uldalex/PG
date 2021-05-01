@@ -1,0 +1,26 @@
+//- Все примеси в этом файле должны начинаться c имени блока (old)
+
+mixin old(text, mods)
+
+  //- Принимает:
+  //-   text    {string} - текст
+  //-   mods    {string} - список модификаторов
+  //- Вызов:
+        +old('Текст', 'some-mod')
+
+  -
+    // список модификаторов
+    var allMods = '';
+    if(typeof(mods) !== 'undefined' && mods) {
+      var modsList = mods.split(',');
+      for (var i = 0; i < modsList.length; i++) {
+        allMods = allMods + ' old--' + modsList[i].trim();
+      }
+    }
+
+  .old(class=allMods)&attributes(attributes)
+    .old__inner
+
+
+      
+      block
