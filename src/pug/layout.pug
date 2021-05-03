@@ -1,5 +1,4 @@
 //- Стандартный шаблон страницы
-
 include mixins.pug
 
 doctype html
@@ -112,9 +111,473 @@ html(class='page  no-js', lang='ru')
           block nav
           //- cearch
           +search()
-
+          //- banners block
+        +carousel()
+          //- content block
         block content
-         
+          //-About
+          section.about
+            .about__inner
+              .about__row
+                .about__content
+                  h3.about__title О компании 
+                  .about__text 
+                    .about-text__before
+                      figure 
+                        img(src="img/logo-white.svg" width="52px" height="43px")
+                    .about-text__content 
+                      p «Пепеляев Групп» – ведущая российская юридическая компания, предоставляющая полный спектр правовых услуг во всех регионах России, странах СНГ и за рубежом. Более 160 юристов в Москве, Санкт-Петербурге, Красноярске, Южно-Сахалинске, Владивостоке, Пекине и Шанхае обеспечивают правовую поддержку более чем 1500 компаний, занятых в разных отраслях экономики, 50% из которых – международные корпорации, осуществляющие долгосрочные инвестиционные проекты на территории России.
+                .about__events
+                  h3.about__title Мероприятия 
+                  .about__event
+                    .about-text__date.about-text__date--old
+                      .about-text__day 21
+                      .about-text__mount Октября 
+                    .about-text__event-content 
+                        a(href="#") Продвижение функции комплаенс внутри компании: лучшие практики 
+                  .about__event
+                    .about-text__date.about-text__date--old
+                      .about-text__day 22
+                      .about-text__mount Октября
+                    .about-text__event-content 
+                        a(href="#")  Налоговая кухня. Рецепты от экспертов
+                  .about__event
+                    .about-text__date
+                      .about-text__day 30
+                      .about-text__mount Октября 
+                    .about-text__event-content 
+                      a(href="#") Сибирский налоговый форум
+          //- section victory
+          +victory()
+          //- section practice
+          section.practice
+           
+              .practice__row
+                .practice__content
+                  h3.practice__title.practice__inner Практика 
+                  ul#practice.practice__list--one
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit0(href="#") 
+                        span Налоговое право и налоговые споры
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit1(href="#") 
+                        span Валютное регулирование и валютный контроль 
+                    li.practice__item.practice__item--no-margin 
+                      a.vaiolit2(href="#") 
+                        span Услуги эскроу-агента 
+                    li.practice__item.practice__item--no-margin 
+                      a.vaiolit3(href="#") 
+                        span Разрешение споров и медиация 
+                    li.practice__item.practice__item--no-margin 
+                      a.vaiolit4(href="#") 
+                        span Международные суды и арбитраж
+                    li.practice__item.practice__item--no-margin 
+                      a.vaiolit5(href="#") 
+                        span Банкротство и антикризисная защита бизнеса
+                    li.practice__item.practice__item--no-margin 
+                      a.vaiolit6(href="#") 
+                        span Корпоративное право
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit7(href="#") 
+                        span Коммерческая практика
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit0(href="#") 
+                        span Недвижимость и строительство
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit1(href="#")
+                        span Трудовое и миграционное право
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit2(href="#")
+                        span Правовая защита информации
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit3(href="#")
+                        span  Семейное и наследственное право
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit4(href="#")
+                        span Таможенное право и внешнеторговое регулирование
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit5(href="#")
+                        span Интеллектуальная собственность и товарные знаки
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit6(href="#")
+                        span Антимонопольное регулирование
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit7(href="#")
+                        span Уголовно-правовая защита бизнеса
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit0(href="#")
+                        span Банковская и финансовая практика
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit1(href="#")
+                        span Административно-правовая защита бизнеса
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit2(href="#")
+                        span Legal GR и антикоррупционный комплаенс
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit3(href="#")
+                        span Профессиональный перевод
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit4(href="#")
+                        span Услуги частным клиентам
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit5(href="#")
+                        span Юридическое сопровождение инвестиционных проектов в России
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit6(href="#")
+                        span Бюджетное право
+                    li.practice__item.practice__item--no-margin
+                      a.vaiolit0(href="#")
+                        span Законопроектная работа
+                a.more(href="#") 
+                  span смотреть все
+          section.practice.practice--grey
+           
+              .practice__row
+                .practice__content
+              .practice__inner
+                .practice__branch
+                  h3.branch__title Отрасли 
+                  section.card-area
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#insurance")
+                                h2.card-front__heading Здравоохранение
+                                
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://player.vimeo.com/external/143977098.mobile.mp4?s=33602515d69322239d3425c09f9ef3a56561c110&profile_id=116" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                            a.inside-page__text(href="#") Работа с  производителями, дистрибьюторами, профессиональными ассоциациями и регулирующими органами отрасли.
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#internet")
+                                h2.card-front__heading Телеком, Медиа, IT
+ 
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://media.istockphoto.com/videos/looping-animation-of-abstract-motherboard-circuit-video-id638848536?b=1&k=6&m=638848536&h=67-kenZndHcAtfkzrU4IhV2ptPnBQBQroyYEfjasHsQ=" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+
+                            a.inside-page__text(href="#") Нормативная регламентация деятельности в области связи; налогообложение телекоммуникационных компаний; вопросы корпоративного права.				  
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#content")
+                                h2.card-front__heading Цифровая экономика
+
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://media.istockphoto.com/videos/technology-network-data-connection-network-marketing-and-cyber-video-id1144280738?b=1&k=6&m=1144280738&h=KTHK1cHIliqzpyo4iFenmm4cD1yeIDj0lcPe3OEdh48=" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                             a.inside-page__text(href="#") Опыт юристов компании по ведению судебных процессов и взаимодействию с государственными органами позволяет давать рекомендации, ориентированные на их практическую реализацию.				  
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#planet")
+                                h2.card-front__heading Экология
+
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://player.vimeo.com/external/400178727.sd.mp4?s=1c207aff46cad17dcf4e6622aafca4c42adc2528&profile_id=164" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                            a.inside-page__text(href="#")  Юристы «Пепеляев Групп» более 6 лет поддерживают национальные и международные компании в делах, связанных с выполнением требований законодательства об охране окружающей среды.
+                  section.card-area
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#insurance")
+                                h2.card-front__heading Здравоохранение
+                                
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://player.vimeo.com/external/143977098.mobile.mp4?s=33602515d69322239d3425c09f9ef3a56561c110&profile_id=116" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                            a.inside-page__text(href="#") Работа с  производителями, дистрибьюторами, профессиональными ассоциациями и регулирующими органами отрасли.
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#internet")
+                                h2.card-front__heading Телеком, Медиа, IT
+ 
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://media.istockphoto.com/videos/looping-animation-of-abstract-motherboard-circuit-video-id638848536?b=1&k=6&m=638848536&h=67-kenZndHcAtfkzrU4IhV2ptPnBQBQroyYEfjasHsQ=" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+
+                            a.inside-page__text(href="#") Нормативная регламентация деятельности в области связи; налогообложение телекоммуникационных компаний; вопросы корпоративного права.				  
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#content")
+                                h2.card-front__heading Цифровая экономика
+
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://media.istockphoto.com/videos/technology-network-data-connection-network-marketing-and-cyber-video-id1144280738?b=1&k=6&m=1144280738&h=KTHK1cHIliqzpyo4iFenmm4cD1yeIDj0lcPe3OEdh48=" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                             a.inside-page__text(href="#") Опыт юристов компании по ведению судебных процессов и взаимодействию с государственными органами позволяет давать рекомендации, ориентированные на их практическую реализацию.				  
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#planet")
+                                h2.card-front__heading Экология
+
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://player.vimeo.com/external/400178727.sd.mp4?s=1c207aff46cad17dcf4e6622aafca4c42adc2528&profile_id=164" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                            a.inside-page__text(href="#")  Юристы «Пепеляев Групп» более 6 лет поддерживают национальные и международные компании в делах, связанных с выполнением требований законодательства об охране окружающей среды.
+                  section.card-area
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#insurance")
+                                h2.card-front__heading Налоговое право
+                                
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://player.vimeo.com/external/486852934.hd.mp4?s=38faa8efb5fa24094191c016b1ff2f51c5aa80a2&profile_id=171" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                            a.inside-page__text(href="#") Работа с  производителями, дистрибьюторами, профессиональными ассоциациями и регулирующими органами отрасли.
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#internet")
+                                h2.card-front__heading Валютный контроль
+ 
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://player.vimeo.com/external/370331493.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6992dd6c1c&profile_id=139&oauth2_token_id=57447761" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+
+                            a.inside-page__text(href="#") Нормативная регламентация деятельности в области связи; налогообложение телекоммуникационных компаний; вопросы корпоративного права.				  
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#content")
+                                h2.card-front__heading Услуги эскроу-агента
+
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://player.vimeo.com/external/370331493.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6992dd6c1c&profile_id=139&oauth2_token_id=57447761" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                             a.inside-page__text(href="#") Опыт юристов компании по ведению судебных процессов и взаимодействию с государственными органами позволяет давать рекомендации, ориентированные на их практическую реализацию.				  
+
+                    section.card-section
+                      .card
+                        .flip-card
+                          .flip-card__container
+                            .card-front
+                              .card-front__tp.card-front__tp--city
+                                svg(class="flags" width="60px" height="60px")
+                                  use(xlink:href="img/sprite.svg#planet")
+                                h2.card-front__heading Разрешение споров
+
+                                
+                              .card-front__bt
+                                .card-front__text-view.card-front__text-view--city подробно
+                            .card-back
+                              video.video__container(autoplay muted loop)
+                                source.video__media(src="https://player.vimeo.com/external/370331493.sd.mp4?s=e90dcaba73c19e0e36f03406b47bbd6992dd6c1c&profile_id=139&oauth2_token_id=57447761" type="video/mp4")
+                        .inside-page
+                          .inside-page__container
+                            a.inside-page__text(href="#")  Юристы «Пепеляев Групп» более 6 лет поддерживают национальные и международные компании в делах, связанных с выполнением требований законодательства об охране окружающей среды. 
+                  
+                            
+
+
+
+          //- section news
+          section.news
+            .news__inner
+              .news__row
+                .news-content
+                  h3.news__title Право и налоги: новости дня
+                  .splide#news-content
+                    .splide__track
+                      ul.splide__list.news-content__list
+                        li.splide__slide.news-content__item 
+                          a(href="#") Президент подписал указ о внесении поправок в Конституцию, которые вступили в силу с 4 июля
+                        li.splide__slide.news-content__item 
+                          a(href="#") Рабочая группа по подготовке поправок к Конституции займется реформой всего законодательства
+                        li.splide__slide.news-content__item 
+                          a(href="#") Утверждены правила выдачи субсидий бизнесу для профилактики коронавирусной инфекции
+                        li.splide__slide.news-content__item 
+                          a(href="#") Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
+                        li.splide__slide.news-content__item 
+                          a(href="#") Международный статус российского флага, под которым ходят суда, может быть понижен до «серой» зоны в общем списке
+                        li.splide__slide.news-content__item 
+                          a(href="#") Президент подписал указ о внесении поправок в Конституцию, которые вступили в силу с 4 июля
+                        li.splide__slide.news-content__item 
+                          a(href="#") Рабочая группа по подготовке поправок к Конституции займется реформой всего законодательства
+                        li.splide__slide.news-content__item 
+                          a(href="#") Утверждены правила выдачи субсидий бизнесу для профилактики коронавирусной инфекции
+                        li.splide__slide.news-content__item 
+                          a(href="#") Разработан законопроект, облегчающий доступ к льготным ставкам налогов при выплатах за рубеж
+                        li.splide__slide.news-content__item 
+                          a(href="#") Международный статус российского флага, под которым ходят суда, может быть понижен до «серой» зоны в общем списке
+                        
+                .news-block
+                  h3.news__title Новости компании 
+                  .splide#news-block
+                    .splide__track
+                      ul.splide__list.news-block__list
+                        li.splide__slide.news-block__item
+                          .news-block__date 05.10.2020
+                          .news-block__text Сергей Пепеляев прокомментировал действия Росприроднадзора в конфликте
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+                        li.splide__slide.news-block__item
+                          .news-block__date 06.10.2020
+                          .news-block__text Интервью Юлии Бороздна журналу “Трудовые споры”: ”В трудовых спорах кадровая...
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+                        li.splide__slide.news-block__item
+                          .news-block__date 07.10.2020
+                          .news-block__text Без явки не виноватые: отменено решение суда, вынесенное в отсутствие сторон
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+                        li.splide__slide.news-block__item
+                          .news-block__date 05.10.2020
+                          .news-block__text Сергей Пепеляев прокомментировал действия Росприроднадзора в конфликте
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+                        li.splide__slide.news-block__item
+                          .news-block__date 06.10.2020
+                          .news-block__text Интервью Юлии Бороздна журналу “Трудовые споры”: ”В трудовых спорах кадровая...
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+                        li.splide__slide.news-block__item
+                          .news-block__date 07.10.2020
+                          .news-block__text Без явки не виноватые: отменено решение суда, вынесенное в отсутствие сторон
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+                        li.splide__slide.news-block__item
+                          .news-block__date 05.10.2020
+                          .news-block__text Сергей Пепеляев прокомментировал действия Росприроднадзора в конфликте
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+                        li.splide__slide.news-block__item
+                          .news-block__date 06.10.2020
+                          .news-block__text Интервью Юлии Бороздна журналу “Трудовые споры”: ”В трудовых спорах кадровая...
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+                        li.splide__slide.news-block__item
+                          .news-block__date 07.10.2020
+                          .news-block__text Без явки не виноватые: отменено решение суда, вынесенное в отсутствие сторон
+                          a(href="#") Подробнее
+                            svg(class="icons" width="13px" height="12px")
+                              use(xlink:href="img/sprite.svg#arrow_min")
+          //- section map    
+          section.map
+            img(src="img/map.png")     
+          
       //-footer    
       .page__footer-wrapper
         +page-footer()
@@ -218,4 +681,3 @@ html(class='page  no-js', lang='ru')
              
     block page-bottom
       script(src='js/bundle.js')
-
