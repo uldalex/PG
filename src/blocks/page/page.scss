@@ -547,7 +547,7 @@ h2{
   @include col(md, 3);
   @include col(sm, 5);
   background-color: #ffffff;
-  color: #272C3E;
+  color: $gray-darkest;
   margin: 2px 0;
   padding: 15px 0;
   text-align: center;
